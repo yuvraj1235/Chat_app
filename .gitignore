@@ -1,0 +1,57 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies - GLOBAL for root node_modules (e.g., server's node_modules)
+node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# dependencies - CLIENT-SPECIFIC node_modules
+client/node_modules/
+server/node_modules/
+
+# testing
+/coverage
+
+# next.js (specific to the client directory)
+client/.next/
+client/out/
+
+# production (if you have a build folder at the root or specific to server)
+/build
+client/build/ # If client has its own build output folder
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# client-specific env files (if any)
+client/.env
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+# vercel (if you deploy with Vercel for the client)
+.vercel/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
